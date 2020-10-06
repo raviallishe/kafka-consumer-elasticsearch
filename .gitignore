@@ -1,0 +1,11 @@
+logs
+project/target
+target
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+**export-env-variables*
+**app/config/ApplicationConfig.scala
