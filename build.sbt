@@ -5,10 +5,11 @@ version := "1.0-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.13.3"
+scalaVersion := "2.12.8"
 
-libraryDependencies += guice
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
+libraryDependencies ++= Seq(guice,
+  "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test,
+  "org.elasticsearch.client" % "elasticsearch-rest-high-level-client" % "7.9.2")
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "ravi.controllers._"
