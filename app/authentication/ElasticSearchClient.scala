@@ -6,7 +6,7 @@ import config.ApplicationConfig._
 import org.apache.http.HttpHost
 import org.apache.http.impl.nio.client.HttpAsyncClientBuilder
 import org.elasticsearch.client.RestClientBuilder.HttpClientConfigCallback
-import org.elasticsearch.client.{RestClient}
+import org.elasticsearch.client.{RestClient, RestHighLevelClient}
 
 object ElasticSearchClient {
 
@@ -19,8 +19,6 @@ object ElasticSearchClient {
       override def customizeHttpClient(httpClientBuilder: HttpAsyncClientBuilder): HttpAsyncClientBuilder =
         httpClientBuilder.setDefaultCredentialsProvider(credentialsProvider)
     })
-
-  import org.elasticsearch.client.RestHighLevelClient
 
   //Java High-Level REST client — It is based on low-level client and exposes API specific methods, taking care of requests marshalling and responses un-marshalling.
   val client = new RestHighLevelClient(builder)
