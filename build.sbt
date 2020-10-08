@@ -9,7 +9,8 @@ scalaVersion := "2.12.8"
 
 libraryDependencies ++= Seq(guice,
   "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test,
-  "org.elasticsearch.client" % "elasticsearch-rest-high-level-client" % "7.9.2")
+  "org.elasticsearch.client" % "elasticsearch-rest-high-level-client" % "7.9.2",
+  "org.apache.kafka" % "kafka-clients" % "2.0.0")
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "ravi.controllers._"
